@@ -74,18 +74,39 @@ body{
 }
 
 
+/* ------- logo ------- */
 
+figure{
+    display: flex;
+    justify-content: center;
+}
+
+img.logo{
+    width: 20%;
+    padding-bottom: 10px;
+}
 /* ------- de klok ------- */
 
 /* Opmaak van de titel */
 #klok h2 {
     color: #fff;
     text-align: center;
+    text-shadow: black 1px 0 25px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4em;
     font-size: 0.8em;
+    position: relative;
+    z-index: 2; 
 
+}
+
+#klok p{
+    text-shadow: black 1px 0 25px;
+}
+
+#klok{
+    margin-top: -2%;
 }
 /* ------- Tekst onder titel over de tijd ------- */
 
@@ -113,7 +134,7 @@ body{
     display: block;
     width: 100px;
     padding: 10px;
-    background-color: #2196f3;
+    background-color: #2C3F51;
     color: #fff;
     font-weight: 300;
     text-align: center;
@@ -125,18 +146,19 @@ body{
 /* Opmaak van de onderste blokken in woorden */
 #klok #tijd div span:nth-child(2){
     padding: 10px;
+    color: black;
     font-size: 0.7em;
     letter-spacing: 0.2em;
     font-weight: 500;
     z-index: 9;
     box-shadow: none;
-    background-color: #127fd6;
+    background-color: #B9B9B9;
     text-transform: uppercase;
 }
 
 /* Seconden krijgt nu opacity van 0.8 */
 #klok #tijd div:nth-last-child(1) span:nth-child(1){
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #klok #tijd div:nth-last-child(1) span:nth-child(2){
@@ -144,11 +166,33 @@ body{
 }
 
 
-@media (min-width: 500px){
+}
 
-#klok #tijd{
+/* ---------------- Media quaries ---------------------*/
 
+@media (min-width: 600px){
+
+
+/* Elementen worden groter */
+#klok #tijd div span{
+    width: 120px;
+}
+
+#klok h2{
+    font-size: 1.0em;
 }
 }
 
+
+@media (min-width: 800px){
+
+    #klok h2{
+    font-size: 1.1em;
+}
+
+}
+
+@media (min-width: 1300px){
+
+}
 
