@@ -30,8 +30,6 @@ body{
     }
 } 
 
-
-
 .landschap{
     position: absolute;
     bottom: 0px;
@@ -55,6 +53,7 @@ body{
         transform: translateY(750px);
     }
 }
+
 .maan{
     background-color: transparent;
     height: 100px;
@@ -67,6 +66,12 @@ body{
     animation:nacht 17s 26s forwards;
 }
 
+.ruimteschip{
+    position: absolute;
+    visibility: hidden;
+}
+
+/* maan wordt nu zichtbaar */
 @keyframes nacht{
     100%{
         opacity: 1;
@@ -105,8 +110,10 @@ img.logo{
     text-shadow: black 1px 0 25px;
 }
 
+/* hoogte van de klok corrigeren*/
+
 #klok{
-    margin-top: -2%;
+    margin-top: -3%;
 }
 /* ------- Tekst onder titel over de tijd ------- */
 
@@ -192,7 +199,27 @@ img.logo{
 
 }
 
-@media (min-width: 1300px){
+@media (min-width: 1100px){
 
+/* Ruimteschip is nu beschikbaar en wordt bijna gelanceerd!*/
+.ruimtefoto{
+    width: 50px;
+}
+
+.ruimteschip{
+    visibility: visible;
+    margin-left: 96%;
+    animation:ruimteschip 10s 29s forwards; 
+    opacity: 0;
+}
+
+/* Beweging van het ruimteschip*/
+
+@keyframes ruimteschip {
+    100%{
+        transform: translate(-450px,-300px);
+        opacity: 1;
+    }
+}
 }
 
