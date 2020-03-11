@@ -9,9 +9,46 @@ body{
     background-color: #CBE2FD;
     margin: 0px;
     overflow-y: hidden;
+
+}
+
+body.overdag{
+    background-color: #CBE2FD;
+    animation: zonOnder 20s forwards;
+}
+
+body.gelelucht{
+    background-color: #FFE66E;
+    animation: lucht 20s 5s forwards;
+}
+body.oranjelucht{
+    background-color: #FFC144;
+    animation: lucht 20s 5s forwards;
+}
+body.goudenuur{
+    background-color: #FF8962;
+    animation: lucht 20s 5s forwards;
+}
+body.paarselucht{
+    background-color: #3B1A52;
     animation: lucht 20s 5s forwards;
 }
 
+body.nacht{
+    background-color: #033655;
+    animation: lucht 20s 5s forwards;
+} 
+
+/* einde - */ 
+
+@keyframes zonOnder {
+    0%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: #000;
+    }
+} 
 
 @keyframes lucht {
     20%{
