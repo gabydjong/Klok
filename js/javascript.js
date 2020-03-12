@@ -29,9 +29,6 @@ function klok (){
     else if(u > 19){
     	document.body.classList.add("gelelucht");
     }    
-    else if(u > 20){
-    	document.body.classList.add("oranjelucht");
-    }   
     else if(u > 21){
     	document.body.classList.add("goudenuur");
     }   

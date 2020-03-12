@@ -14,12 +14,11 @@ body{
 
 body.overdag{
     background-color: #CBE2FD;
-    animation: zonOnder 20s forwards;
 }
 
 body.gelelucht{
     background-color: #FFE66E;
-    animation: lucht 20s 5s forwards;
+    animation: zonLaag 20s forwards;
 }
 body.oranjelucht{
     background-color: #FFC144;
@@ -41,12 +40,12 @@ body.nacht{
 
 /* einde - */ 
 
-@keyframes zonOnder {
+@keyframes zonLaag {
     0%{
-        background-color: #fff;
+        background-color: #FFE66E;
     }
     100%{
-        background-color: #000;
+        background-color: #FFC144;
     }
 } 
 
