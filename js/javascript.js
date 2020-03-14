@@ -21,22 +21,16 @@ function klok (){
   seconden.innerHTML = s;
     
   /* Verandering basis op tijd*/
-  // body.overdag #overdag
 
-    if(u > 8){
+    if(u >= 8 && u < 20){
     	document.body.classList.add("overdag");
     }
-    else if(u > 19){
-    	document.body.classList.add("gelelucht");
+    else if(u >= 20 && u <= 21){
+    	document.body.classList.add("geeloranje");
     }    
-    else if(u > 21){
-    	document.body.classList.add("goudenuur");
-    }   
-    else if(u > 22){
-    	document.body.classList.add("paarselucht");
-    }   
     else{
 		document.body.classList.add("nacht");
+    document.classList.add("zon");
     }
 
 

@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'helvetica', sans-serif;
 }
@@ -12,60 +11,57 @@ body{
 
 }
 
+/* Van overdag (blauw) naar in de avond geel, naar oranje, roze, paars en als laatste blauw. */
 body.overdag{
     background-color: #CBE2FD;
+    animation-fill-mode: forwards;
 }
 
-body.gelelucht{
+/* Van gele lucht naar oranje lucht */
+body.geeloranje{
     background-color: #FFE66E;
-    animation: zonLaag 20s forwards;
-}
-body.oranjelucht{
-    background-color: #FFC144;
-    animation: lucht 20s 5s forwards;
-}
-body.goudenuur{
-    background-color: #FF8962;
-    animation: lucht 20s 5s forwards;
-}
-body.paarselucht{
-    background-color: #3B1A52;
-    animation: lucht 20s 5s forwards;
+    animation-name: geeloranje;
+    animation-delay: 7s;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+
 }
 
+/* Van paarse naar donkere lucht */
 body.nacht{
-    background-color: #033655;
-    animation: lucht 20s 5s forwards;
-} 
+    background-color: #FF8962;
+    animation-name: paarsnacht;
+    animation-delay: 0s;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
 
-/* einde - */ 
+}
 
-@keyframes zonLaag {
+
+@keyframes geeloranje {
+  0%{
+      background-color: #FFE66E;
+  }
+  100%{
+      background-color: #FF8962;
+  }
+
+}
+
+@keyframes paarsnacht {
+    /* Van roze naar paarse lucht*/
     0%{
-        background-color: #FFE66E;
-    }
-    100%{
-        background-color: #FFC144;
-    }
-} 
-
-@keyframes lucht {
-    20%{
-        background-color: #FFE66E;
-    }
-    45%{
-        background-color: #FFC144;
-    }
-    65%{
         background-color: #FF8962;
     }
-    80%{
+
+    50%{
         background-color: #3B1A52;
     }
+
     100%{
         background-color: #033655;
     }
-} 
+}
 
 .landschap{
     position: absolute;
@@ -73,20 +69,23 @@ body.nacht{
     left: 0px;
     width: 100%;
     z-index: -1
-    
+
 }
 
+/* animatie zon */
 .zon{
     position: relative;
     z-index: -1;
+    top: 50px;
     background-color: #ff8c1a;
     margin-left: 10%;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     box-shadow: 0px 0px 60px 5px #ff8c1a;
-    animation:zonsondergang 60s forwards; 
+    animation:zonsondergang 30s  2s forwards;
 }
+
 
 @keyframes zonsondergang {
     100%{
@@ -102,15 +101,10 @@ body.nacht{
     width: 100px;
     border-radius: 50%;
     box-shadow: -20px 10px white;
-    margin-left: 10%;
-    margin-top: -1%;
+    margin-left: 15%;
+    margin-top: -5%;
     opacity: 0;
-    animation:nacht 17s 26s forwards;
-}
-
-.ruimteschip{
-    position: absolute;
-    visibility: hidden;
+    animation:nacht 30s 25s forwards;
 }
 
 /* maan wordt nu zichtbaar */
@@ -119,6 +113,12 @@ body.nacht{
         opacity: 1;
     }
 }
+
+.ruimteschip{
+    position: absolute;
+    visibility: hidden;
+}
+
 
 
 /* ------- logo ------- */
@@ -145,7 +145,7 @@ img.logo{
     letter-spacing: 0.4em;
     font-size: 0.8em;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 
 }
 
@@ -160,9 +160,14 @@ img.logo{
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        min-height: 500px;
         align-items: center;
+        height: 310px;
 }
+
+.container-tijd{
+        transform: translate(0, 50%); 
+
+} 
 
 /* ------- Tekst onder titel over de tijd ------- */
 
@@ -171,7 +176,7 @@ img.logo{
     margin-top: 20px;
     padding: 0px 20px 0px 20px;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     color: white;
 }
 
@@ -187,9 +192,7 @@ img.logo{
     padding: 0px 20px 0px 20px;
 }
 
-.container-tijd{
-    transform: translate(0, 12%);
-}
+
 
 /* Opmaak van de bovenste blokken tijd */
 #klok #tijd div span{
@@ -268,7 +271,7 @@ img.logo{
     visibility: visible;
     margin-left: 96%;
     margin-top: 300px;
-    animation:ruimteschip 8s 28s forwards; 
+    animation:ruimteschip 8s 28s forwards;
     opacity: 0;
 }
 
@@ -281,4 +284,3 @@ img.logo{
     }
 }
 }
-
