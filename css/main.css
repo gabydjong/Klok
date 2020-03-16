@@ -11,7 +11,7 @@ body{
 
 }
 
-/* Van overdag (blauw) naar in de avond geel, naar oranje, roze, paars en als laatste blauw. */
+/* Overdag */ 
 body.overdag{
     background-color: #CBE2FD;
     animation-fill-mode: forwards;
@@ -27,14 +27,19 @@ body.geeloranje{
 
 }
 
-/* Van paarse naar donkere lucht */
-body.nacht{
+/* Overgang naar nacht */
+body.overgang{
     background-color: #FF8962;
-    animation-name: paarsnacht;
+    animation-name: overgang;
     animation-delay: 0s;
     animation-duration: 40s;
     animation-fill-mode: forwards;
 
+}
+
+/* Nacht */
+body.nacht{
+    background-color: #033655;
 }
 
 
@@ -48,8 +53,8 @@ body.nacht{
 
 }
 
-@keyframes paarsnacht {
-    /* Van roze naar paarse lucht*/
+@keyframes overgang {
+    /* Van roze naar donkere lucht*/
     0%{
         background-color: #FF8962;
     }
@@ -62,6 +67,7 @@ body.nacht{
         background-color: #033655;
     }
 }
+
 
 .landschap{
     position: absolute;
@@ -87,6 +93,7 @@ body.nacht{
 }
 
 
+
 @keyframes zonsondergang {
     100%{
         transform: translateY(750px);
@@ -102,9 +109,9 @@ body.nacht{
     border-radius: 50%;
     box-shadow: -20px 10px white;
     margin-left: 15%;
-    margin-top: -5%;
+    margin-top: -2%;
     opacity: 0;
-    animation:nacht 30s 25s forwards;
+    animation:nacht 40s 18s forwards;
 }
 
 /* maan wordt nu zichtbaar */
