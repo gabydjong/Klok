@@ -121,9 +121,26 @@ body.nacht{
     }
 }
 
+
+/* Ruimteschip is nu beschikbaar en wordt bijna gelanceerd!*/
+.ruimtefoto{
+    width: 50px;
+}
+
 .ruimteschip{
-    position: absolute;
-    visibility: hidden;
+    margin-left: 96%;
+    margin-top: 300px;
+    animation:ruimteschip 8s 28s forwards;
+    opacity: 0;
+}
+
+/* Beweging van het ruimteschip*/
+
+@keyframes ruimteschip {
+    100%{
+        transform: translate(-1400px,-300px);
+        opacity: 1;
+    }
 }
 
 
@@ -269,25 +286,4 @@ img.logo{
 
 @media (min-width: 1100px){
 
-/* Ruimteschip is nu beschikbaar en wordt bijna gelanceerd!*/
-.ruimtefoto{
-    width: 50px;
-}
-
-.ruimteschip{
-    visibility: visible;
-    margin-left: 96%;
-    margin-top: 300px;
-    animation:ruimteschip 8s 28s forwards;
-    opacity: 0;
-}
-
-/* Beweging van het ruimteschip*/
-
-@keyframes ruimteschip {
-    100%{
-        transform: translate(-1400px,-300px);
-        opacity: 1;
-    }
-}
 }
