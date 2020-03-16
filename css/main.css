@@ -130,18 +130,26 @@ body.nacht{
 .ruimteschip{
     margin-left: 96%;
     margin-top: 300px;
-    animation:ruimteschip 8s 28s forwards;
-    opacity: 0;
+    animation:ruimteschip 20s 5s forwards;
+    opacity: 1;
 }
-
-/* Beweging van het ruimteschip*/
 
 @keyframes ruimteschip {
+    from {
+        transform: rotate(50deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+
+
     100%{
-        transform: translate(-1400px,-300px);
-        opacity: 1;
+        transform: translate(-500px,-450px);
+        opacity: 1; 
+        
     }
 }
+
 
 
 
@@ -274,13 +282,29 @@ img.logo{
 
 
 @media (min-width: 800px){
-
     #klok h2{
     font-size: 1.1em;
 }
 }
 
 @media (min-width: 800px){
+
+/* positie veranderen, ruimteschip heeft nu meer ruimte*/
+    .ruimteschip{
+    margin-left: 96%;
+    margin-top: 300px;
+    animation:ruimteschip 8s 28s forwards;
+    opacity: 0;
+}
+
+/* Beweging van het ruimteschip*/
+
+@keyframes ruimteschip {
+    100%{
+        transform: translate(-1400px,-300px);
+        opacity: 1;
+    }
+}
 
 }
 
