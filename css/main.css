@@ -11,6 +11,10 @@ body{
 
 }
 
+main {
+    height: 0px;
+}
+
 /* Overdag */ 
 body.overdag{
     background-color: #CBE2FD;
@@ -74,14 +78,14 @@ body.nacht{
     bottom: 0px;
     left: 0px;
     width: 100%;
-    z-index: -1
+    z-index: -1;
 
 }
 
 /* animatie zon */
 .zon{
     position: relative;
-    z-index: -1;
+    z-index: -11;
     top: 50px;
     background-color: #ff8c1a;
     margin-left: 10%;
@@ -176,7 +180,7 @@ body.nacht{
 #cloud2 {
     top: -30px;
     left: -100px;
-    animation: movingclouds 110s linear infinite;
+    animation: movingclouds 100s linear infinite;
 }
 
 #cloud3 {
@@ -197,11 +201,11 @@ body.nacht{
 @keyframes movingclouds {
     0% {
         margin-left: 100%;
-        opacity: 0.1; 
+        opacity: 0; 
      }
     100% {
         margin-left: -150%;
-        opacity: 0.7; 
+        opacity: 0.6; 
     }
 }
 
@@ -351,7 +355,7 @@ img.logo{
     opacity: 0;
 }
 
-/* Beweging van het ruimteschip*/
+/* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
 
 @keyframes ruimteschip {
     100%{
@@ -360,7 +364,7 @@ img.logo{
     }
 }
 
-/* Bewegings breedte van de wolken*/
+/* Bewegings breedte van de wolken en positie wordt verandert*/
 #sky{
     width: 500px;
 }
