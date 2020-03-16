@@ -3,11 +3,11 @@ var today = new Date();
 document.getElementById("specifiek").innerHTML = today.toString();
 
   function klok (){
-  var uren = document.getElementById('uren');
+  var uren =document.getElementById('uren');
   var minuten = document.getElementById ('minuten');
   var seconden = document.getElementById('seconden');
 
-  var u = new Date().getHours();
+  var u =  8; // new Date().getHours();
   var m = new Date().getMinutes();
   var s = new Date().getSeconds();
 

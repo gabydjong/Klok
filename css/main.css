@@ -131,25 +131,79 @@ body.nacht{
     margin-left: 96%;
     margin-top: 300px;
     animation:ruimteschip 20s 5s forwards;
-    opacity: 1;
+    opacity: 0;
 }
 
 @keyframes ruimteschip {
     from {
-        transform: rotate(50deg);
+        transform: rotate(30deg);
     }
     to {
-        transform: rotate(30deg);
+        transform: rotate(60deg);
     }
 
 
     100%{
-        transform: translate(-500px,-450px);
+        transform: translate(-600px,-450px);
         opacity: 1; 
         
     }
 }
 
+#sky{
+    width: 500px;
+    position: absolute;
+    z-index: -10;
+    top: 10%;
+}
+
+/* wolken */
+
+.cloud {
+    position: absolute;
+    background-image: url('https://www.dl.dropboxusercontent.com/s/31ivp5fsjcgytgp/cloud1.png');
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 114px;
+}
+
+#cloud1 {
+    top: 100px;
+    left: -20px;
+    animation:movingclouds 60s linear infinite;
+}
+
+#cloud2 {
+    top: -30px;
+    left: -100px;
+    animation: movingclouds 110s linear infinite;
+}
+
+#cloud3 {
+    top: 50px;
+    left: -50px;
+    transform: scale(0.6);
+    animation: movingclouds 80s linear infinite;
+}
+
+#cloud4 {
+    top: -30px;
+    left: -30px;
+    transform: scale(0.8);
+    animation: movingclouds 50s linear infinite;
+}
+
+
+@keyframes movingclouds {
+    0% {
+        margin-left: 100%;
+        opacity: 0.1; 
+     }
+    100% {
+        margin-left: -150%;
+        opacity: 0.7; 
+    }
+}
 
 
 
@@ -304,6 +358,27 @@ img.logo{
         transform: translate(-1400px,-300px);
         opacity: 1;
     }
+}
+
+/* Bewegings breedte van de wolken*/
+#sky{
+    width: 500px;
+}
+
+#cloud1 {
+    left: 100px;
+}
+
+#cloud2 {
+    left: 600px;
+}
+
+#cloud3 {
+    left: 350px;
+}
+
+#cloud4 {
+    left: 30px;
 }
 
 }
