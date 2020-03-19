@@ -7,7 +7,7 @@ document.getElementById("specifiek").innerHTML = today.toString();
   var minuten = document.getElementById ('minuten');
   var seconden = document.getElementById('seconden');
 
-  var u = new Date().getHours();
+  var u = 8;// new Date().getHours();
   var m = new Date().getMinutes();
   var s = new Date().getSeconds();
 
@@ -40,6 +40,10 @@ document.getElementById("specifiek").innerHTML = today.toString();
       sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'hidden'; 
 
+      /* Bericht */
+      document.getElementById("bericht").innerHTML = "Goede dag!";
+
+
     }
     
     else if(u > 19 && u <= 20){
@@ -56,12 +60,11 @@ document.getElementById("specifiek").innerHTML = today.toString();
       document.getElementById("zon").style.animationDuration = "500s";
 
       /* sterren zijn niet zichtbaar*/
-      sterelement = document.querySelector('.container-sterren'); 
+      sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'hidden'; 
 
-      /* sterren zijn niet zichtbaar*/
-      sterelement = document.querySelector('.container-sterren'); 
-      sterelement.style.visibility = 'hidden'; 
+      /* Bericht */
+      document.getElementById("bericht").innerHTML = "Goede avond!";
 
     }  
 
@@ -72,6 +75,8 @@ document.getElementById("specifiek").innerHTML = today.toString();
       sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'hidden'; 
 
+      /* Bericht */
+      document.getElementById("bericht").innerHTML = "Goede avond!";
     } 
 
     else{
@@ -90,12 +95,14 @@ document.getElementById("specifiek").innerHTML = today.toString();
       wolkelement.style.visibility = 'hidden'; 
 
       /* sterren zijn nu wel zichtbaar */
-      sterelement = document.querySelector('.container-sterren'); 
+      sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'visible'; 
 
+       /* Bericht */
+      document.getElementById("bericht").innerHTML = "Slaap lekker!";
+
     }
-
-
 }
+
 
 var interval = setInterval(klok, 1000);

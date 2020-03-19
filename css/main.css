@@ -7,8 +7,10 @@
 body{
     background-color: #CBE2FD;
     margin: 0px;
-    overflow-y: hidden;
 
+    /* lost de pagina lengte op */
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 main {
@@ -220,28 +222,44 @@ figure{
 
 img.logo{
     width: 30%;
-    padding-bottom: 10px;
 }
-/* ------- de klok ------- */
+
+/* tekst opmaak */ 
+
+h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: black 1px 0 35px;
+    font-weight: 700;
+    margin: 20px 0px 20px 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 0.8em;
+    z-index: 2;
+
+}
 
 /* Opmaak van de titel */
 #klok h2 {
     color: #fff;
     text-align: center;
-    text-shadow: black 1px 0 25px;
+    text-shadow: black 1px 0 35px;
     font-weight: 700;
-    padding: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 20px;
     text-transform: uppercase;
     letter-spacing: 0.4em;
     font-size: 0.8em;
-    position: relative;
     z-index: 2;
 
 }
 
+/* Opmaak GMT tekst */
 #klok p{
-    text-shadow: black 1px 0 25px;
+    text-shadow: black 1px 0 35px;
 }
+
+/* ------- de klok ------- */
+
 
 /* hoogte van de klok corrigeren*/
 #klok{
@@ -263,8 +281,7 @@ img.logo{
 
 #specifiek{
     text-align: center;
-    margin-top: 20px;
-    padding: 0px 20px 0px 20px;
+    margin: 20px 20px 0px 20px;
     position: relative;
     z-index: 2;
     color: white;
@@ -278,8 +295,7 @@ img.logo{
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    margin-top: 20px;
-    padding: 0px 20px 0px 20px;
+    margin: 20px;
 }
 
 
@@ -343,7 +359,7 @@ img.logo{
     #klok h2{
     font-size: 1.1em;
 }
-}
+
 
 @media (min-width: 800px){
 
