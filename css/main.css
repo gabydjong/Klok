@@ -31,7 +31,8 @@ main {
 
 @keyframes zonsondergang {
     100%{
-        transform: translateY(750px);
+        transform: translateY(510px);
+        visibility: hidden;
     }
 }
 
@@ -184,7 +185,7 @@ body.nacht{
 #cloud2 {
     top: -30px;
     left: -100px;
-    animation: movingclouds 100s linear infinite;
+    animation: movingclouds 70s linear infinite;
 }
 
 #cloud3 {
@@ -230,7 +231,7 @@ body.nacht{
 #stars:after {
   content: " ";
   position: absolute;
-  top: 2000px;
+
   width: 1px;
   height: 1px;
   background: transparent;
@@ -247,7 +248,7 @@ body.nacht{
 #stars2:after {
   content: " ";
   position: absolute;
-  top: 2000px;
+
   width: 2px;
   height: 2px;
   background: transparent;
@@ -265,7 +266,7 @@ body.nacht{
 #stars3:after {
   content: " ";
   position: absolute;
-  top: 2000px;
+
   width: 3px;
   height: 3px;
   background: transparent;
@@ -278,7 +279,7 @@ body.nacht{
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-700px);
   }
 }
 
