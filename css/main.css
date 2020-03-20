@@ -232,9 +232,20 @@ img.logo{
 
 /* ------- tekst opmaak onder logo ------- */
 
-h1, #klok h2 {
+h1, #klok h2{
     color: #fff;
-    text-shadow: black 1px 0 35px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-shadow: black 1px 0 50px;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+ #klok h2 {
+    letter-spacing: 0.4em;
 }
 
 #GMTtijd{
@@ -265,9 +276,6 @@ h1, #klok h2 {
 
 } 
 
-/* ------- Tekst onder titel over de tijd ------- */
-
-
 /* Positie van de klok en flex */
 
 #klok #tijd{
@@ -278,7 +286,6 @@ h1, #klok h2 {
     text-align: center;
     margin: 20px;
 }
-
 
 
 /* Opmaak van de bovenste blokken tijd */

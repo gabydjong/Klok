@@ -40,7 +40,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
       sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'hidden'; 
 
-      /* Bericht */
+      /* Bericht goede dag */
       document.getElementById("bericht").innerHTML = "Goede dag!";
 
 
@@ -63,7 +63,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
       sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'hidden'; 
 
-      /* Bericht */
+      /* Bericht goede avond */
       document.getElementById("bericht").innerHTML = "Goede avond!";
 
     }  
@@ -75,7 +75,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
       sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'hidden'; 
 
-      /* Bericht */
+      /* Bericht goede avond */
       document.getElementById("bericht").innerHTML = "Goede avond!";
     } 
 
@@ -98,7 +98,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
       sterelement = document.querySelector('.container-stars'); 
       sterelement.style.visibility = 'visible'; 
 
-       /* Bericht */
+       /* Bericht slaap lekker */
       document.getElementById("bericht").innerHTML = "Slaap lekker!";
 
     }
