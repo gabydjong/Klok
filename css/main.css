@@ -7,10 +7,6 @@
 body{
     background-color: #CBE2FD;
     margin: 0px;
-
-    /* lost de pagina lengte op */
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 main {
