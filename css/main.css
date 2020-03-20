@@ -240,7 +240,7 @@ h1, #klok h2{
     text-transform: uppercase;
     letter-spacing: 0.3em;
     text-shadow: black 1px 0 50px;
-    margin-top: 20px;
+    margin: 20px 20px 0px 20px;
     z-index: 2;
 }
 
