@@ -17,6 +17,53 @@ main {
     height: 0px;
 }
 
+/*-------------------  achtergrond opmaak  ----------------------- */
+
+/* zon opmaak en animatie */
+.zon{
+    position: relative;
+    z-index: -11;
+    top: 50px;
+    background-color: #ff8c1a;
+    margin-left: 10%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 60px 5px #ff8c1a;
+    animation:zonsondergang 30s  2s forwards;
+}
+
+@keyframes zonsondergang {
+    100%{
+        transform: translateY(750px);
+    }
+}
+
+/* maan opmaak en animatie */
+
+.maan{
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: -20px 10px white;
+    margin-left: 15%;
+    margin-top: -2%;
+    opacity: 0;
+    animation:nacht 40s 18s forwards;
+}
+
+/* maan wordt nu zichtbaar */
+@keyframes nacht{
+    100%{
+        opacity: 1;
+    }
+}
+
+/* ---- Achtergrond kleur ----*/
+
 /* Overdag */ 
 body.overdag{
     background-color: #CBE2FD;
@@ -48,6 +95,7 @@ body.nacht{
     background-color: #033655;
 }
 
+/* ---- Animatie van de achtergrond ----*/
 
 @keyframes geeloranje {
   0%{
@@ -74,6 +122,7 @@ body.nacht{
     }
 }
 
+/* ---- Silhouette natuur ----*/
 
 .landschap{
     position: absolute;
@@ -84,51 +133,8 @@ body.nacht{
 
 }
 
-/* animatie zon */
-.zon{
-    position: relative;
-    z-index: -11;
-    top: 50px;
-    background-color: #ff8c1a;
-    margin-left: 10%;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 60px 5px #ff8c1a;
-    animation:zonsondergang 30s  2s forwards;
-}
+/* ---- Ruimtechip en animatie ----*/
 
-
-
-@keyframes zonsondergang {
-    100%{
-        transform: translateY(750px);
-    }
-}
-
-.maan{
-    background-color: transparent;
-    position: absolute;
-    z-index: -1;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: -20px 10px white;
-    margin-left: 15%;
-    margin-top: -2%;
-    opacity: 0;
-    animation:nacht 40s 18s forwards;
-}
-
-/* maan wordt nu zichtbaar */
-@keyframes nacht{
-    100%{
-        opacity: 1;
-    }
-}
-
-
-/* Ruimteschip is nu beschikbaar en wordt bijna gelanceerd!*/
 .ruimtefoto{
     width: 50px;
 }
@@ -156,14 +162,14 @@ body.nacht{
     }
 }
 
+/* ---- Wolken opmaak en animatie ----*/
+
 #sky{
     width: 500px;
     position: absolute;
     z-index: -10;
     top: 10%;
 }
-
-/* wolken */
 
 .cloud {
     position: absolute;
@@ -211,7 +217,7 @@ body.nacht{
     }
 }
 
-
+/*-------------------  einde achtergrond opmaak  ----------------------- */
 
 /* ------- logo ------- */
 
@@ -224,44 +230,26 @@ img.logo{
     width: 30%;
 }
 
-/* tekst opmaak */ 
+/* ------- tekst opmaak onder logo ------- */
 
-h1 {
+h1, #klok h2 {
     color: #fff;
+    text-shadow: black 1px 0 35px;
+}
+
+#GMTtijd{
     text-align: center;
-    text-shadow: black 1px 0 35px;
-    font-weight: 700;
-    margin: 20px 0px 20px 0px;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-size: 0.8em;
+    margin: 20px 20px 0px 20px;
     z-index: 2;
-
-}
-
-/* Opmaak van de titel */
-#klok h2 {
-    color: #fff;
-    text-align: center;
-    text-shadow: black 1px 0 35px;
-    font-weight: 700;
-    margin: 0px 20px 0px 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-size: 0.8em;
-    z-index: 2;
-
-}
-
-/* Opmaak GMT tekst */
-#klok p{
+    color: white;
     text-shadow: black 1px 0 35px;
 }
 
-/* ------- de klok ------- */
+
+/* ------- Opmaak van de klok  ------- */
 
 
-/* hoogte van de klok corrigeren*/
+/* hoogte van de klok corrigeren */
 #klok{
         display: flex;
         align-items: center;
@@ -279,13 +267,6 @@ h1 {
 
 /* ------- Tekst onder titel over de tijd ------- */
 
-#specifiek{
-    text-align: center;
-    margin: 20px 20px 0px 20px;
-    position: relative;
-    z-index: 2;
-    color: white;
-}
 
 /* Positie van de klok en flex */
 

@@ -1,6 +1,6 @@
 
 var today = new Date();
-document.getElementById("specifiek").innerHTML = today.toString();
+document.getElementById("GMTtijd").innerHTML = today.toString();
 
   function klok (){
   var uren = document.getElementById('uren');
