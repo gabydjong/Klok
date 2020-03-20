@@ -7,6 +7,7 @@
 body{
     background-color: #CBE2FD;
     margin: 0px;
+    overflow-y: hidden;
 }
 
 main {
@@ -31,10 +32,12 @@ main {
 
 @keyframes zonsondergang {
     100%{
-        transform: translateY(510px);
         visibility: hidden;
+        transform: translateY(90vh);
     }
 }
+
+
 
 /* maan opmaak en animatie */
 
@@ -47,9 +50,9 @@ main {
     border-radius: 50%;
     box-shadow: -20px 10px white;
     margin-left: 15%;
-    margin-top: -2%;
+    margin-top: -17%;
     opacity: 0;
-    animation:nacht 40s 18s forwards;
+    animation:nacht 20s 27s forwards;
 }
 
 /* maan wordt nu zichtbaar */
@@ -162,7 +165,7 @@ body.nacht{
 /* ---- Wolken opmaak en animatie ----*/
 
 #sky{
-    width: 500px;
+    width: 90vw;
     position: absolute;
     z-index: -10;
     top: 10%;
@@ -174,43 +177,40 @@ body.nacht{
     background-repeat: no-repeat;
     width: 176px;
     height: 114px;
+    opacity: 0;
 }
 
 #cloud1 {
     top: 100px;
-    left: -20px;
-    animation:movingclouds 60s linear infinite;
+    margin-left: 20%;
+    animation:movingclouds 35s linear infinite;
 }
 
 #cloud2 {
     top: -30px;
-    left: -100px;
-    animation: movingclouds 70s linear infinite;
+    margin-left: 10%;
+    animation: movingclouds 35s linear infinite;
 }
 
 #cloud3 {
     top: 50px;
-    left: -50px;
-    transform: scale(0.6);
-    animation: movingclouds 80s linear infinite;
+    margin-left: 30%;
+    animation: movingclouds 45s linear infinite;
 }
 
 #cloud4 {
     top: -30px;
-    left: -30px;
-    transform: scale(0.8);
-    animation: movingclouds 50s linear infinite;
+    margin-left: 70%;
+    animation: movingclouds 45s linear infinite;
 }
 
 
+
 @keyframes movingclouds {
-    0% {
-        margin-left: 100%;
-        opacity: 0; 
-     }
-    100% {
-        margin-left: -150%;
-        opacity: 0.6; 
+    100%{
+        transform: translate(-200%);
+        opacity: 0.7; 
+        
     }
 }
 
@@ -231,7 +231,6 @@ body.nacht{
 #stars:after {
   content: " ";
   position: absolute;
-
   width: 1px;
   height: 1px;
   background: transparent;
@@ -248,7 +247,6 @@ body.nacht{
 #stars2:after {
   content: " ";
   position: absolute;
-
   width: 2px;
   height: 2px;
   background: transparent;
@@ -276,10 +274,10 @@ body.nacht{
 
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    transform: translateY(5vh);
   }
   to {
-    transform: translateY(-700px);
+    transform: translateY(-100vh);
   }
 }
 
@@ -391,12 +389,20 @@ h1, #klok h2{
 }
 
 
-}
+
 
 /* ---------------- Media quaries ---------------------*/
+@media screen and (min-width: 400px) {
 
-@media (min-width: 600px){
+.maan{
+    margin-top: -2%;
+}
 
+}
+
+
+
+@media screen and (min-width: 600px) {
 
 /* Elementen worden groter */
 #klok #tijd div span{
@@ -406,7 +412,8 @@ h1, #klok h2{
 }
 
 
-@media (min-width: 800px){
+
+@media screen and (min-width: 800px){
 
 /* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
 .ruimteschip{
@@ -423,30 +430,41 @@ h1, #klok h2{
     }
 }
 
-/* Bewegings breedte van de wolken en positie wordt verandert*/
-#sky{
-    width: 500px;
-}
-
+/* wolken positie veranderen door breedte van het scherm */
 #cloud1 {
-    left: 100px;
+    margin-left: 95%;
+
 }
 
 #cloud2 {
-    left: 600px;
+    margin-left: 70%;
+
 }
 
 #cloud3 {
-    left: 350px;
+    margin-left: 20%;
+
 }
 
 #cloud4 {
-    left: 30px;
-}
+    margin-left: 40%;
 
 }
 
-@media (min-width: 1100px){
+
+/* zon hoogte */
+@keyframes zonsondergang {
+    100%{
+        transform: translateY(75vh);
+        visibility: hidden;
+    }
+}
+
+
+
+}
+
+@media screen and (min-width: 1100px){
 
 h1, #klok h2{
  font-size: 1.1em;
