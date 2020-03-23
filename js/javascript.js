@@ -2,9 +2,9 @@
 var today = new Date();
 document.getElementById("GMTtijd").innerHTML = today.toString();
 
-  function klok (){
+  function klok() {
   var uren = document.getElementById('uren');
-  var minuten = document.getElementById ('minuten');
+  var minuten = document.getElementById('minuten');
   var seconden = document.getElementById('seconden');
 
   var u = new Date().getHours();
@@ -12,9 +12,9 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
   var s = new Date().getSeconds();
 
   /* zodat tijd altijd uit 2 cijfers bestaat.*/
-  u =  (u < 10)? "0" + u : u;
-  m =  (m < 10)? "0" + m : m;
-  s =  (s < 10)? "0" + s : s;
+  u =  (u < 10) ? "0" + u : u;
+  m =  (m < 10) ? "0" + m : m;
+  s =  (s < 10) ? "0" + s : s;
 
   uren.innerHTML = u;
   minuten.innerHTML = m;
@@ -22,7 +22,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
     
   /* achtergrond kleur verandering en elementen veranderen */
 
-    if(u >= 8 && u <= 19){
+    if (u >= 8 && u <= 19) {
     	document.body.classList.add("overdag");
 
       /* laat de zon zien en laat hem stil staan, en laat de maan niet zien*/
