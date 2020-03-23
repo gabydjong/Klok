@@ -132,7 +132,7 @@ body.nacht{
 
 }
 
-/* ---- Ruimtechip en animatie ----*/
+/* ---- Ruimteschip en animatie ----*/
 
 .ruimtefoto{
     width: 50px;
@@ -202,7 +202,6 @@ body.nacht{
     margin-left: 70%;
     animation: movingclouds 45s linear infinite;
 }
-
 
 
 @keyframes movingclouds {
@@ -324,7 +323,6 @@ h1, #klok h2{
 /* ------- Opmaak van de klok  ------- */
 
 
-/* hoogte van de klok corrigeren */
 #klok{
         display: flex;
         align-items: center;
@@ -332,8 +330,10 @@ h1, #klok h2{
         flex-direction: column;
         text-align: center;
         align-items: center;
-        height: 310px;
+
 }
+
+/* hoogte van de klok corrigeren */
 
 .container-tijd{
         transform: translate(0, 50%); 
@@ -362,7 +362,7 @@ h1, #klok h2{
     font-weight: 300;
     text-align: center;
     font-size: 3em;
-    box-shadow: 0 0 0 1px rgba (0,0,0,.2);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
 }
 
 /* Opmaak van de onderste blokken in woorden */
@@ -393,7 +393,7 @@ h1, #klok h2{
 /* ---------------- Media quaries ---------------------*/
 @media screen and (min-width: 400px) {
 
-/* maan positie veranderen*/
+/* maan positie veranderen in nacht mode*/
 .maan{
     margin-top: -2%;
 }
@@ -409,6 +409,14 @@ h1, #klok h2{
     width: 120px;
 }
 
+h1, #klok h2{
+    font-size: 1em;
+}
+
+#GMTtijd{
+    font-size: 17px;
+}
+
 }
 
 
@@ -417,10 +425,8 @@ h1, #klok h2{
 
 /* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
 .ruimteschip{
-    margin-left: 96%;
-    margin-top: 300px;
     animation:ruimteschip 8s 28s forwards;
-    opacity: 0;
+
 }
 
 @keyframes ruimteschip {
@@ -430,7 +436,7 @@ h1, #klok h2{
     }
 }
 
-/* wolken positie veranderen door breedte van het scherm */
+/* wolken verandert qua positie, doordat er nu meer ruimte is */
 #cloud1 {
     margin-left: 95%;
 
@@ -451,23 +457,24 @@ h1, #klok h2{
 
 }
 
-
-/* zon hoogte */
+/* zon tot een bepaald punt laten zakken */
 @keyframes zonsondergang {
     100%{
         transform: translateY(75vh);
         visibility: hidden;
     }
 }
-
-
-
 }
 
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1300px){
 
+/* Titels groter */
 h1, #klok h2{
- font-size: 1.1em;
+ font-size: 1.2em;
 }  
+
+#GMTtijd{
+    font-size: 20px;
+}
 
 }
