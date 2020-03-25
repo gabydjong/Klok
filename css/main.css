@@ -464,7 +464,7 @@ h1, #klok h2{
 /* zon tot een bepaald punt laten zakken */
 @keyframes zonsondergang {
     100%{
-        transform: translateY(73.5vh);
+        transform: translateY(73.3vh);
         visibility: hidden;
     }
 }

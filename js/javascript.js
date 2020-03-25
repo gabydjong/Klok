@@ -7,7 +7,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
   var minuten = document.getElementById('minuten');
   var seconden = document.getElementById('seconden');
 
-  var u = 21// new Date().getHours();
+  var u = 23// new Date().getHours();
   var m = new Date().getMinutes();
   var s = new Date().getSeconds();
 
