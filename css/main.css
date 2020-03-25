@@ -17,9 +17,9 @@ main {
 
 /* zon opmaak en animatie */
 .zon{
-    position: relative;
+    position: absolute;
     z-index: -11;
-    top: 50px;
+    top: 40px;
     background-color: #ff8c1a;
     margin-left: 10%;
     height: 100px;
@@ -49,7 +49,7 @@ main {
     border-radius: 50%;
     box-shadow: -20px 10px white;
     margin-left: 15%;
-    margin-top: -17%;
+    top: 40px;
     opacity: 0;
     animation:nacht 20s 27s forwards;
 }
@@ -140,7 +140,6 @@ body.nacht{
 
 .ruimteschip{
     margin-left: 96%;
-    margin-top: 300px;
     animation:ruimteschip 20s 5s forwards;
     opacity: 0;
 }
@@ -272,7 +271,7 @@ body.nacht{
 
 @keyframes animStar {
   from {
-    transform: translateY(5vh);
+    transform: translateY(0vh);
   }
   to {
     transform: translateY(-100vh);
@@ -390,12 +389,17 @@ h1, #klok h2{
 
 
 
-/* ---------------- Media quaries ---------------------*/
+/* --------------------- Media quaries ----------------------*/
 @media screen and (min-width: 400px) {
 
-/* maan positie veranderen in nacht mode*/
+/* maan positie veranderen in nacht mode omdat er meer ruimte is*/
 .maan{
-    margin-top: -2%;
+    margin-top:2%;
+}
+
+/* zon positie veranderen omdat er meer ruimte is*/
+.zon{
+    margin-top:2%;
 }
 
 }
@@ -460,7 +464,7 @@ h1, #klok h2{
 /* zon tot een bepaald punt laten zakken */
 @keyframes zonsondergang {
     100%{
-        transform: translateY(75vh);
+        transform: translateY(73.5vh);
         visibility: hidden;
     }
 }
