@@ -139,7 +139,7 @@ body.nacht{
 }
 
 .ruimteschip{
-    margin-left: 96%;
+    margin-left: 66%;
     animation:ruimteschip 20s 5s forwards;
     opacity: 0;
 }
@@ -154,7 +154,7 @@ body.nacht{
 
 
     100%{
-        transform: translate(-600px,-450px);
+        transform: translate(-500px,-450px);
         opacity: 1; 
         
     }
@@ -346,7 +346,7 @@ h1, #klok h2{
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
 }
 
 
@@ -402,6 +402,9 @@ h1, #klok h2{
     margin-top:2%;
 }
 
+.ruimteschip{
+    margin-left: 90%;
+}
 }
 
 
