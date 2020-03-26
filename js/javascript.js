@@ -96,7 +96,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
       maanelement = document.querySelector('.maan'); 
       maanelement.style.visibility = 'visible'; 
       maanelement.style.animation = 'none';
-      document.getElementById("maan").style.opacity = "0.9";
+      document.getElementById("maan").style.opacity = "0.6";
 
       /* Te donker om wolken te zien */
       wolkelement = document.querySelector('.sky'); 
