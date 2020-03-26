@@ -391,9 +391,9 @@ body.nacht{
 /*-------------------  einde achtergrond opmaak  ----------------------- */
 
 
-/* --------------------- Media quaries ----------------------*/
+/* --------------------- Media queries ----------------------*/
 
-/* -------------- Media quary 1 ---------------*/
+/* -------------- Media query 1 ---------------*/
 @media only screen and (min-width: 262px) {
 
 /* hoogte van de klok corrigeren */
@@ -403,7 +403,7 @@ body.nacht{
     } 
 }
 
-/* -------------- Media quary 2 ---------------*/
+/* -------------- Media query 2 ---------------*/
 @media only screen and (min-width: 370px) {
 
 /* hoogte van de klok corrigeren */
@@ -434,7 +434,7 @@ body.nacht{
 
 }
 
-/* -------------- Media quary 3 ---------------*/
+/* -------------- Media query 3 ---------------*/
 @media only screen and (min-width: 600px) {
 
 /* Geen margin onderste blokken meer*/
@@ -457,7 +457,7 @@ h1, #klok h2{
 
 }
 
-/* -------------- Media quary 4 ---------------*/
+/* -------------- Media query 4 ---------------*/
 @media only screen and (min-width: 800px){
 
 /* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
@@ -503,7 +503,7 @@ h1, #klok h2{
 }
 }
 
-/* -------------- Media quary 5 ---------------*/
+/* -------------- Media query 5 ---------------*/
 @media only screen and (min-width: 1300px){
 
 /* Titels groter */
