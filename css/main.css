@@ -115,13 +115,13 @@ span{
     margin: 0px 5px 0px 5px;
 }
 
-/* Seconden krijgt nu opacity van 0.8 */
+/* Seconden blok krijgt nu opacity van 0.83 */
 #klok #tijd div:nth-last-child(1) span:nth-child(1){
-    opacity: 0.9;
+    opacity: 0.83;
 }
 
 #klok #tijd div:nth-last-child(1) span:nth-child(2){
-    opacity: 0.8;
+    opacity: 0.83;
 }
 
 /*-------------------  achtergrond opmaak  ----------------------- */
@@ -172,7 +172,7 @@ span{
     }
 }
 
-/* -----------  Ruimteschip en animatie ----------- */
+/* -----------  Ruimteschip opmaak en animatie ----------- */
 
 .ruimtefoto{
     width: 50px;
@@ -428,6 +428,7 @@ body.nacht{
     margin-top:2%;
 }
 
+/* Positie van ruimteschip veranderen */
 .ruimteschip{
     margin-left: 90%;
 }
@@ -437,20 +438,22 @@ body.nacht{
 /* -------------- Media query 3 ---------------*/
 @media only screen and (min-width: 600px) {
 
-/* Geen margin onderste blokken meer*/
+/* Geen margin onderste blokken meer, omdat nu de blokken naast elkaar staan*/
 #klok #tijd div span:nth-child(2){
     margin-bottom: 0px;
 }
 
-/* Elementen worden groter */
+/* Klok blokken worden groter */
 #klok #tijd div span{
     width: 120px;
 }
 
+/* Titels worden groter */
 h1, #klok h2{
     font-size: 1em;
 }
 
+/* Tekst GMT tijd wordt groter */
 #GMTtijd{
     font-size: 17px;
 }
@@ -506,11 +509,12 @@ h1, #klok h2{
 /* -------------- Media query 5 ---------------*/
 @media only screen and (min-width: 1300px){
 
-/* Titels groter */
+/* Titels worden groter */
 h1, #klok h2{
  font-size: 1.2em;
 }  
 
+/* GMT tijd wordt groter */
 #GMTtijd{
     font-size: 20px;
 }
