@@ -333,15 +333,14 @@ h1, #klok h2{
 }
 
 
-
-/* ruimte tussen de klok gedeeltes */
+/* margin tussen de klok gedeeltes */
 span{
     margin: 0px 5px 0px 5px;
 }
 
 /* hoogte van de klok corrigeren */
 .container-tijd{
-        margin: 37px 0px 37px 0px; 
+        margin-top: 37px; 
 
 } 
 
@@ -401,7 +400,7 @@ span{
 
 /* hoogte van de klok corrigeren */
 .container-tijd{
-        transform: translate(0, 15%);
+        transform: translate(0, 18%);
         margin: 0px; 
     } 
 }
