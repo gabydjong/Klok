@@ -399,8 +399,10 @@ span{
 
 /* --------------------- Media quaries ----------------------*/
 @media screen and (min-width: 262px) {
-
-
+/* hoogte van de klok corrigeren */
+.container-tijd{
+        transform: translate(0, 5%); 
+    } 
 }
 
 @media screen and (min-width: 370px) {
@@ -409,7 +411,6 @@ span{
 .container-tijd{
         transform: translate(0, 50%); 
         margin: 0px;
-
 } 
 
 /* maan positie veranderen in nacht mode omdat er meer ruimte is*/
