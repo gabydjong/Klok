@@ -1,5 +1,7 @@
 # Klok reis naar Mars
 
+Link naar de website: https://gabydjong.github.io/challenge2-klok/
+
 Het doel van de geanimeerde klok is dat bewoners de huidige aardse tijd kunnen zien op verschillende schermgroottes. Bovendien heb ik de klok visueel laten veranderen op basis van de tijd, om neerslachtigheid van de reizigers tegen te gaan. Bij de klok zelf heb ik dezelfde kleuren gebruikt als het dashboard van de vorige challenge. Zodat het thema van het dashboard ook terugkomt in de klok. 
 
 Ik ben natuurlijk eerst gaan schetsen, vervolgens heb ik in XD de wireframes visueel gemaakt met kleuren om een beter beeld te krijgen voor mijzelf hoe de klok eruit zal gaan zien. Ik ben begonnen met het ontwerpen volgens de mobile-first methode. Dat betekend dat ik de klok eerst heb ontworpen voor mobiel, en de klok op basis van de beschikbare ruimte heb laten veranderen met hulp van media queries. Ik heb voor een digitale tijd gekozen, omdat je hierdoor meer keuze hebt om de elementen te laten veranderen, wat goed is voor de responsiviteit. Zo heb ik eerst 3 blokken op een klein scherm onder elkaar gezet, en als het scherm groter wordt dan komen de blokken langzaam naast elkaar te staan. Als het scherm nog groter wordt, dan zal de tekst en de elementen een fractie groter worden. 
