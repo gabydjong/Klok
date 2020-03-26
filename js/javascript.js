@@ -22,7 +22,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
     
   /* achtergrond kleur verandering en elementen veranderen */
 
-    if (u >= 8 && u <= 19) {
+    if (u >= 8 && u <= 18) {
     	document.body.classList.add("overdag");
 
       /* laat de zon zien en laat hem stil staan, en laat de maan niet zien*/
@@ -46,7 +46,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
 
     }
     
-    else if(u > 19 && u <= 20){
+    else if(u > 18 && u <= 19){
     	document.body.classList.add("geeloranje");
 
       /* laat de zon zien, en niet de maan*/
@@ -68,7 +68,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
 
     }  
 
-    else if(u > 20 && u <= 21){
+    else if(u > 19 && u <= 20){
       document.body.classList.add("overgang");
 
       /* sterren zijn niet zichtbaar*/
