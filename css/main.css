@@ -12,10 +12,123 @@ body{
 main {
     height: 0px;
 }
+ 
+/* -----------  Logo van SPACEX ----------- */
+
+figure{
+    display: flex;
+    justify-content: center;
+}
+
+img.logo{
+    width: 30%;
+}
+
+/* -----------  tekst opmaak onder logo ----------- */
+
+h1, #klok h2{
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-shadow: black 1px 0 50px;
+    margin: 20px 20px 0px 20px;
+    z-index: 2;
+}
+
+ #klok h2 {
+    letter-spacing: 0.4em;
+}
+
+#GMTtijd{
+    text-align: center;
+    margin: 20px 20px 0px 20px;
+    z-index: 2;
+    color: white;
+    text-shadow: black 1px 0 35px;
+}
+
+
+/* -----------  Opmaak van de klok ----------- */
+
+/* Flexbox klok centreren */
+#klok{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+}
+
+
+/* hoogte van de klok corrigeren */
+.container-tijd{
+        margin-top: 37px; 
+
+} 
+
+/* Positie van de klok en flex */
+#klok #tijd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 20px 20px 0px 20px;
+}
+
+
+/* Opmaak van de bovenste blokken tijd */
+#klok #tijd div span{
+    position: relative;
+    display: block;
+    width: 100px;
+    padding: 10px;
+    background-color: #2C3F51;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    font-size: 3em;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+}
+
+/* Opmaak van de onderste blokken in woorden */
+#klok #tijd div span:nth-child(2){
+    padding: 10px;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background-color: #B9B9B9;
+    text-transform: uppercase;
+}
+
+/* margin tussen de klok gedeeltes */
+span{
+    margin: 0px 5px 0px 5px;
+}
+
+/* Seconden krijgt nu opacity van 0.8 */
+#klok #tijd div:nth-last-child(1) span:nth-child(1){
+    opacity: 0.9;
+}
+
+#klok #tijd div:nth-last-child(1) span:nth-child(2){
+    opacity: 0.8;
+}
 
 /*-------------------  achtergrond opmaak  ----------------------- */
 
-/* zon opmaak en animatie */
+
+/* -----------  zon opmaak en animatie ----------- */
+
 .zon{
     position: absolute;
     z-index: -11;
@@ -36,9 +149,7 @@ main {
     }
 }
 
-
-
-/* maan opmaak en animatie */
+/* -----------  maan opmaak en animatie ----------- */
 
 .maan{
     background-color: transparent;
@@ -57,82 +168,11 @@ main {
 /* maan wordt nu zichtbaar */
 @keyframes nacht{
     100%{
-        opacity: 1;
+        opacity: 0.5;
     }
 }
 
-/* ---- Achtergrond kleur ----*/
-
-/* Overdag */ 
-body.overdag{
-    background-color: #CBE2FD;
-    animation-fill-mode: forwards;
-}
-
-/* Van gele lucht naar oranje lucht */
-body.geeloranje{
-    background-color: #FFE66E;
-    animation-name: geeloranje;
-    animation-delay: 7s;
-    animation-duration: 20s;
-    animation-fill-mode: forwards;
-
-}
-
-/* Overgang naar nacht */
-body.overgang{
-    background-color: #FF8962;
-    animation-name: overgang;
-    animation-delay: 0s;
-    animation-duration: 40s;
-    animation-fill-mode: forwards;
-
-}
-
-/* Nacht */
-body.nacht{
-    background-color: #033655;
-}
-
-/* ---- Animatie van de achtergrond ----*/
-
-@keyframes geeloranje {
-  0%{
-      background-color: #FFE66E;
-  }
-  100%{
-      background-color: #FF8962;
-  }
-
-}
-
-@keyframes overgang {
-    /* Van roze naar donkere lucht*/
-    0%{
-        background-color: #FF8962;
-    }
-
-    50%{
-        background-color: #3B1A52;
-    }
-
-    100%{
-        background-color: #033655;
-    }
-}
-
-/* ---- Silhouette natuur ----*/
-
-.landschap{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: -1;
-
-}
-
-/* ---- Ruimteschip en animatie ----*/
+/* -----------  Ruimteschip en animatie ----------- */
 
 .ruimtefoto{
     width: 50px;
@@ -160,7 +200,7 @@ body.nacht{
     }
 }
 
-/* ---- Wolken opmaak en animatie ----*/
+/* -----------  Wolken opmaak en animatie ----------- */
 
 #sky{
     width: 90vw;
@@ -211,7 +251,7 @@ body.nacht{
     }
 }
 
-/* ---- Sterren opmaak en animatie ----*/
+/* -----------  Sterren opmaak en animatie ----------- */
 #container-stars {
   position: relative;
   z-index: -20;
@@ -278,124 +318,82 @@ body.nacht{
   }
 }
 
+/* ----------- Achtergrond kleuren en animatie ------------*/
+
+/* Overdag */ 
+body.overdag{
+    background-color: #CBE2FD;
+    animation-fill-mode: forwards;
+}
+
+/* Van gele lucht naar oranje lucht */
+body.geeloranje{
+    background-color: #FFE66E;
+    animation-name: geeloranje;
+    animation-delay: 7s;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+
+}
+
+/* Overgang naar nacht */
+body.overgang{
+    background-color: #FF8962;
+    animation-name: overgang;
+    animation-delay: 0s;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+
+}
+
+/* Nacht */
+body.nacht{
+    background-color: #033655;
+}
+
+/* Animatie van de achtergrond */
+@keyframes geeloranje {
+  0%{
+      background-color: #FFE66E;
+  }
+  100%{
+      background-color: #FF8962;
+  }
+
+}
+
+ /* Van roze naar donkere lucht */
+@keyframes overgang {
+    0%{
+        background-color: #FF8962;
+    }
+
+    50%{
+        background-color: #3B1A52;
+    }
+
+    100%{
+        background-color: #033655;
+    }
+}
+
+/* ----------- Footer silhouette natuur ------------*/
+
+.landschap{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+
+}
 
 /*-------------------  einde achtergrond opmaak  ----------------------- */
 
-/* ------- logo ------- */
-
-figure{
-    display: flex;
-    justify-content: center;
-}
-
-img.logo{
-    width: 30%;
-}
-
-/* ------- tekst opmaak onder logo ------- */
-
-h1, #klok h2{
-    color: #fff;
-    text-align: center;
-    font-weight: 600;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    text-shadow: black 1px 0 50px;
-    margin: 20px 20px 0px 20px;
-    z-index: 2;
-}
-
- #klok h2 {
-    letter-spacing: 0.4em;
-}
-
-#GMTtijd{
-    text-align: center;
-    margin: 20px 20px 0px 20px;
-    z-index: 2;
-    color: white;
-    text-shadow: black 1px 0 35px;
-}
-
-
-/* ------- Opmaak van de klok  ------- */
-
-
-#klok{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-
-}
-
-
-/* margin tussen de klok gedeeltes */
-span{
-    margin: 0px 5px 0px 5px;
-}
-
-/* hoogte van de klok corrigeren */
-.container-tijd{
-        margin-top: 37px; 
-
-} 
-
-/* Positie van de klok en flex */
-#klok #tijd{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 20px 20px 0px 20px;
-}
-
-
-/* Opmaak van de bovenste blokken tijd */
-#klok #tijd div span{
-    position: relative;
-    display: block;
-    width: 100px;
-    padding: 10px;
-    background-color: #2C3F51;
-    color: #fff;
-    font-weight: 300;
-    text-align: center;
-    font-size: 3em;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
-}
-
-/* Opmaak van de onderste blokken in woorden */
-#klok #tijd div span:nth-child(2){
-    padding: 10px;
-    margin-bottom: 10px;
-    color: black;
-    font-size: 0.7em;
-    letter-spacing: 0.2em;
-    font-weight: 500;
-    z-index: 9;
-    box-shadow: none;
-    background-color: #B9B9B9;
-    text-transform: uppercase;
-}
-
-/* Seconden krijgt nu opacity van 0.8 */
-#klok #tijd div:nth-last-child(1) span:nth-child(1){
-    opacity: 0.9;
-}
-
-#klok #tijd div:nth-last-child(1) span:nth-child(2){
-    opacity: 0.8;
-}
-
-
-
 
 /* --------------------- Media quaries ----------------------*/
+
+/* -------------- Media quary 1 ---------------*/
 @media only screen and (min-width: 262px) {
 
 /* hoogte van de klok corrigeren */
@@ -405,6 +403,7 @@ span{
     } 
 }
 
+/* -------------- Media quary 2 ---------------*/
 @media only screen and (min-width: 370px) {
 
 /* hoogte van de klok corrigeren */
@@ -412,12 +411,19 @@ span{
         transform: translate(0, 50%); 
 } 
 
-/* maan positie veranderen in nacht mode omdat er meer ruimte is*/
+/* maan positie veranderen in nacht mode omdat er meer ruimte is */
 .maan{
     margin-top:1%;
 }
 
-/* zon positie veranderen omdat er meer ruimte is*/
+/* maan wordt nu lichter, omdat er nu geen tekst voor staat */
+@keyframes nacht{
+    100%{
+        opacity: 1;
+    }
+}
+
+/* zon positie veranderen omdat er meer ruimte is */
 .zon{
     margin-top:2%;
 }
@@ -428,18 +434,15 @@ span{
 
 }
 
-
-
+/* -------------- Media quary 3 ---------------*/
 @media only screen and (min-width: 600px) {
 
 /* Geen margin onderste blokken meer*/
 #klok #tijd div span:nth-child(2){
     margin-bottom: 0px;
-
 }
 
 /* Elementen worden groter */
-
 #klok #tijd div span{
     width: 120px;
 }
@@ -454,8 +457,7 @@ h1, #klok h2{
 
 }
 
-
-
+/* -------------- Media quary 4 ---------------*/
 @media only screen and (min-width: 800px){
 
 /* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
@@ -501,6 +503,7 @@ h1, #klok h2{
 }
 }
 
+/* -------------- Media quary 5 ---------------*/
 @media only screen and (min-width: 1300px){
 
 /* Titels groter */

@@ -1,7 +1,8 @@
-
+/* GMT tijd laten zien als tekst */
 var today = new Date();
 document.getElementById("GMTtijd").innerHTML = today.toString();
 
+/* Huidige tijd opvragen en dat laten zien */
   function klok() {
   var uren = document.getElementById('uren');
   var minuten = document.getElementById('minuten');
@@ -20,16 +21,17 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
   minuten.innerHTML = m;
   seconden.innerHTML = s;
     
-  /* achtergrond kleur verandering en elementen veranderen */
-
+  /* achtergrond kleur veranderen en elementen veranderen op basis van de huidige tijd */
     if (u >= 8 && u <= 18) {
+      /* Achtergrondkleur veranderen */
     	document.body.classList.add("overdag");
 
-      /* laat de zon zien en laat hem stil staan, en laat de maan niet zien*/
+      /* laat de zon zien en laat hem stil staan */
       zonelement = document.querySelector('.zon'); 
       zonelement.style.visibility = 'visible'; 
       zonelement.style.animation = 'none';
 
+      /* laat maan niet zien */
       maanelement = document.querySelector('.maan'); 
       maanelement.style.visibility = 'hidden'; 
 
@@ -47,12 +49,14 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
     }
     
     else if(u > 18 && u <= 19){
+      /* Achtergrondkleur veranderen */
     	document.body.classList.add("geeloranje");
 
-      /* laat de zon zien, en niet de maan*/
+      /* laat de zon zien */
       zonelementelement = document.querySelector('.zon'); 
       zonelementelement.style.visibility = 'visible'; 
 
+      /* laat de maan niet zien */
       maanelement = document.querySelector('.maan'); 
       maanelement.style.visibility = 'hidden'; 
 
@@ -69,6 +73,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
     }  
 
     else if(u > 19 && u <= 20){
+      /* Achtergrondkleur veranderen */
       document.body.classList.add("overgang");
 
       /* sterren zijn niet zichtbaar*/
@@ -80,15 +85,18 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
     } 
 
     else{
+      /* Achtergrondkleur veranderen */
 		  document.body.classList.add("nacht");
-      /* laat de maan zien, en niet de zon*/
+
+      /* laat de zon niet zien */
       zonelement = document.querySelector('.zon'); 
       zonelement.style.visibility = 'hidden'; 
-      document.getElementById("maan").style.opacity = "0.9";
 
+      /* laat de maan zien en toon geen animatie, zodat de maan meteen zichtbaar is. */
       maanelement = document.querySelector('.maan'); 
       maanelement.style.visibility = 'visible'; 
       maanelement.style.animation = 'none';
+      document.getElementById("maan").style.opacity = "0.9";
 
       /* Te donker om wolken te zien */
       wolkelement = document.querySelector('.sky'); 
