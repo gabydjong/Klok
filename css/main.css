@@ -400,12 +400,7 @@ span{
 /* --------------------- Media quaries ----------------------*/
 @media screen and (min-width: 262px) {
 
-/* hoogte van de klok corrigeren */
-.container-tijd{
-        transform: translate(0, 15%); 
-        margin: 0px;
 
-    } 
 }
 
 @media screen and (min-width: 370px) {
@@ -413,6 +408,7 @@ span{
 /* hoogte van de klok corrigeren */
 .container-tijd{
         transform: translate(0, 50%); 
+        margin: 0px;
 
 } 
 
