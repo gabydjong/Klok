@@ -402,7 +402,8 @@ span{
 
 /* hoogte van de klok corrigeren */
 .container-tijd{
-        transform: translate(0, 10%); 
+        transform: translate(0, 25%);
+        margin: 0px; 
     } 
 }
 
@@ -411,7 +412,6 @@ span{
 /* hoogte van de klok corrigeren */
 .container-tijd{
         transform: translate(0, 50%); 
-        margin: 0px;
 } 
 
 /* maan positie veranderen in nacht mode omdat er meer ruimte is*/
