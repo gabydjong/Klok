@@ -8,7 +8,7 @@ document.getElementById("GMTtijd").innerHTML = today.toString();
   var minuten = document.getElementById('minuten');
   var seconden = document.getElementById('seconden');
 
-  var u = new Date().getHours();
+  var u = 8 // new Date().getHours();
   var m = new Date().getMinutes();
   var s = new Date().getSeconds();
 
