@@ -356,7 +356,6 @@ span{
 }
 
 
-
 /* Opmaak van de bovenste blokken tijd */
 #klok #tijd div span{
     position: relative;
@@ -398,16 +397,16 @@ span{
 
 
 /* --------------------- Media quaries ----------------------*/
-@media screen and (min-width: 262px) {
+@media only screen and (min-width: 262px) {
 
 /* hoogte van de klok corrigeren */
 .container-tijd{
-        transform: translate(0, 20%);
+        transform: translate(0, 15%);
         margin: 0px; 
     } 
 }
 
-@media screen and (min-width: 370px) {
+@media only screen and (min-width: 370px) {
 
 /* hoogte van de klok corrigeren */
 .container-tijd{
@@ -432,7 +431,7 @@ span{
 
 
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
 
 /* Geen margin onderste blokken meer*/
 #klok #tijd div span:nth-child(2){
@@ -441,11 +440,10 @@ span{
 }
 
 /* Elementen worden groter */
+
 #klok #tijd div span{
     width: 120px;
 }
-
-
 
 h1, #klok h2{
     font-size: 1em;
@@ -459,7 +457,7 @@ h1, #klok h2{
 
 
 
-@media screen and (min-width: 800px){
+@media only screen and (min-width: 800px){
 
 /* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
 .ruimteschip{
@@ -504,7 +502,7 @@ h1, #klok h2{
 }
 }
 
-@media screen and (min-width: 1300px){
+@media only screen and (min-width: 1300px){
 
 /* Titels groter */
 h1, #klok h2{
@@ -513,6 +511,17 @@ h1, #klok h2{
 
 #GMTtijd{
     font-size: 20px;
+}
+
+/* Klok wordt groter */
+#klok #tijd div span{
+    width: 150px;
+    font-size: 3.3em;
+}
+
+/* klok tekst minuut/sec/uur wordt groter */
+#klok #tijd div span:nth-child(2){
+    font-size: 1em;
 }
 
 }
