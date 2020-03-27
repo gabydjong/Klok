@@ -530,4 +530,17 @@ h1, #klok h2{
     font-size: 1em;
 }
 
+/* Beweging van het ruimteschip verloopt anders, doordat er meer ruimte is. */
+.ruimteschip{
+    animation:ruimteschip 8s 33s forwards;
+
+}
+
+@keyframes ruimteschip {
+    100%{
+        transform: translate(-2500px,-300px);
+        opacity: 1;
+    }
+}
+
 }
